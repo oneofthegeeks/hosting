@@ -1,5 +1,5 @@
 # hosting
-Setting up hosting server VM instructions and steps
+# Setting up hosting server on VM instructions and steps below
 
 
 
@@ -8,7 +8,7 @@ sudo apt install docker.io docker-compose -y
 mkdir -p ~/wordpress/site1
 sudo nano ~/wordpress/site1/docker-compose.yml
 
-#Copy in the following code to the yml file and change the port by 1 if doing multiple sites
+# Copy in the following code to the yml file and change the port by 1 if doing multiple sites
 
 version: '3.7'
 
@@ -40,7 +40,7 @@ services:
       - ./db_data:/var/lib/mysql
 
 
-## End of Copy 
+# End of Copy 
 
 cd ~/wordpress/site1
 sudo docker-compose up -d
