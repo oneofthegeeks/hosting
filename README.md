@@ -20,12 +20,12 @@ Ensure your VM is running an updated version of Ubuntu.
 
 3. **Create a directory for the WordPress site:**
     ```bash
-    mkdir -p ~/wordpress/site1
+    mkdir -p ~/wordpress/oneofthegeeks
     ```
 
 4. **Create and edit the Docker Compose file:**
     ```bash
-    sudo nano ~/wordpress/site1/docker-compose.yml
+    sudo nano ~/wordpress/oneofthegeeks/docker-compose.yml
     ```
 
 5. **Copy the following code into the `docker-compose.yml` file:**
@@ -36,7 +36,7 @@ Ensure your VM is running an updated version of Ubuntu.
     services:
       wordpress:
         image: wordpress:latest
-        container_name: wordpress_site1
+        container_name: wordpress_oneofthegeeks
         restart: always
         ports:
           - "8081:80"
@@ -50,7 +50,7 @@ Ensure your VM is running an updated version of Ubuntu.
 
       db:
         image: mysql:5.7
-        container_name: mysql_site1
+        container_name: mysql_oneofthegeeks
         restart: always
         environment:
           MYSQL_DATABASE: wordpress
@@ -65,7 +65,7 @@ Ensure your VM is running an updated version of Ubuntu.
 
 6. **Navigate to the WordPress directory:**
     ```bash
-    cd ~/wordpress/site1
+    cd ~/wordpress/oneofthegeeks
     ```
 
 7. **Start the Docker containers:**
